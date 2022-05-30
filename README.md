@@ -3,6 +3,7 @@ Proiect Javascript
 Contributors:
 
 - Fagadau Andrei;
+- Mihai Burileanu;
 - Cosmin Ciocîrlan;
 - Alexandru Smadoiu;
 - Manu M.;
