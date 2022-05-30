@@ -3,4 +3,4 @@ Proiect Javascript
 Contributors:
 
 - Fagadau Andrei;
-- Cosmin C.
+- Cosmin C;
