@@ -1,2 +1,5 @@
 # ITSchool-Javascript
-PRoiect Javascript
+Proiect Javascript
+Contributors:
+
+- Fagadau Andrei;
