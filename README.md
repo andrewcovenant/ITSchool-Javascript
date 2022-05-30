@@ -1,9 +1,5 @@
 # ITSchool-Javascript
 Proiect Javascript
-
-Nastase Valentin Mihai 
-
-Proiect Javascript
 Contributors:
 
 - Fagadau Andrei;
@@ -12,3 +8,4 @@ Contributors:
 - Manu M.;
 - Ungureanu Mihai;
 - Iosipescu Adrian Ionut;
+- Nastase Valentin Mihai ;
