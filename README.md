@@ -1,4 +1,6 @@
 # ITSchool-Javascript
-PRoiect Javascript
+Proiect Javascript
+Contributors:
 
-Cosmin
+- Fagadau Andrei;
+- Cosmin C.
