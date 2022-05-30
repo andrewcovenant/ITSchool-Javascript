@@ -1,2 +1,4 @@
 # ITSchool-Javascript
-PRoiect Javascript
+Proiect Javascript
+
+Nastase Valentin Mihai 
