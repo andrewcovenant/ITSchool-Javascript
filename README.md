@@ -13,3 +13,4 @@ Contributors:
 - Cosmin C;
 - Mirabela;
 - Vacarciuc V
+- Losonti Raluca
