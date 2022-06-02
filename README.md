@@ -1,4 +1,5 @@
 # ITSchool-Javascript
+
 Proiect Javascript
 Contributors:
 
@@ -14,3 +15,4 @@ Contributors:
 - Mirabela;
 - Vacarciuc V
 - Losonti Raluca
+- Alin Fecioru;
