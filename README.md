@@ -15,4 +15,4 @@ Contributors:
 - Mirabela;
 - Vacarciuc V
 - Losonti Raluca
-- Alin Fecioru;
+- Alin Fecioru
