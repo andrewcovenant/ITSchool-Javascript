@@ -8,25 +8,39 @@ const callApi = () => {
 callApi();
 
 function listProducts(res) {
-  const products = res.map((product) => {
-    const price = document.createElement("span");
-    price.textContent = product.price;
-    content.appendChild(price);
-    const title = document.createElement("p");
-    title.textContent = product.title;
-    content.appendChild(title);
-    const image = document.createElement("img");
-    image.width = 300;
-    image.src = product.image;
-    content.appendChild(image);
-  });
-  return products;
+  return (root.innerHTML = res
+    .map((product) => {
+      let { price, title, image, description } = product;
+      title = title.substring(0, 15);
+      description = description.substring(0, 30) + "...";
+
+      return ` <div class="col" >
+              <div class="content">
+    <div class="image">
+      <img src=${image} alt="image" class="img-responsive" />
+    </div>
+    <div class="title">
+      <h3>${title}</h3>
+    </div>
+    <div class="description">
+      <p class="text-muted">${description}</p>
+    </div>
+    <div class="footer">
+      <span class="price">$${price}</span>
+      <a href="#" class="buy-btn"><i class="fa-solid fa-bag-shopping"></i></a>
+    </div>
+  </div>
+</div> `;
+    })
+    .join(""));
+
+  
 }
 
-const increment = document.getElementById('increment');
+const increment = document.getElementById("increment");
 let count = 0;
 
 function incrementNumber() {
-    count++;
-    increment.innerText = count;
+  count++;
+  increment.innerText = count;
 }
