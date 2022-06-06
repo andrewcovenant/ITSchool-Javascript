@@ -22,3 +22,11 @@ function listProducts(res) {
   });
   return products;
 }
+
+const increment = document.getElementById('increment');
+let count = 0;
+
+function incrementNumber() {
+    count++;
+    increment.innerText = count;
+}

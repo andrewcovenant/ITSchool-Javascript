@@ -25,3 +25,23 @@
     border-radius: 12px;
  } 
  
+.cart-container {
+    height: 200px;
+    width: 200px;
+}
+.cart-btn {
+    height: 100px;
+    width: 100px;
+}
+.cart-icon {
+    font-size: 4em;
+}
+.cart-span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.3em;
+}
+li {
+    list-style: none;
+}
