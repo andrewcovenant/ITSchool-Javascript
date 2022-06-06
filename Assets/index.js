@@ -9,24 +9,34 @@ callApi();
 
 function listProducts(res) {
   const products = res.map((product) => {
-    const price = document.createElement("span");
-    price.textContent = product.price;
-    content.appendChild(price);
+    const productContainer = document.createElement("div");
     const title = document.createElement("p");
-    title.textContent = product.title;
-    content.appendChild(title);
+    const price = document.createElement("span");
     const image = document.createElement("img");
+    const description = document.createElement("span");
+
+    productContainer.setAttribute("class", "content");
+
+    title.textContent = product.title;
+    productContainer.appendChild(title);
+
     image.width = 300;
     image.src = product.image;
-    content.appendChild(image);
+    productContainer.appendChild(image);
+
+    description.textContent = product.description;
+    productContainer.appendChild(description);
+
+    price.textContent = product.price;
+    productContainer.appendChild(price);
   });
   return products;
 }
 
-const increment = document.getElementById('increment');
+const increment = document.getElementById("increment");
 let count = 0;
 
 function incrementNumber() {
-    count++;
-    increment.innerText = count;
+  count++;
+  increment.innerText = count;
 }
