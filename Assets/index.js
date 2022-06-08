@@ -1,7 +1,12 @@
+let API_RESPONSE;
+
 const callApi = () => {
   return fetch("https://fakestoreapi.com/products")
     .then((response) => response.json())
-    .then((data) => listProducts(data))
+    .then((data) => {
+      API_RESPONSE = data;
+      return listProducts(data)
+    })
     .catch((error) => console.log(error));
 };
 
@@ -32,7 +37,7 @@ function listProducts(res) {
     </div>
     <div class="footer">
       <span class="price">$${price}</span>
-      <button class="addtocart" onclick="addToCart(${prod})"> <i class="fa-solid fa-bag-shopping"></i> </button>
+      <button class="addtocart" onclick="addToCart(${id})"> <i class="fa-solid fa-bag-shopping"></i> </button>
       
     </div>
   </div>
@@ -40,10 +45,11 @@ function listProducts(res) {
     })
     .join(""));
 }
- let productList=[];
 
-const addToCart=(prod)=> {
-  console.log(prod)
+let productList = [];
+
+const addToCart = (id)=> {
+  console.log(id, API_RESPONSE);
 }
 const increment = document.getElementById("increment");
 let count = 0;
