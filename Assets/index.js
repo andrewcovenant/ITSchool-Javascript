@@ -8,29 +8,33 @@ const callApi = () => {
 callApi();
 
 function listProducts(res) {
-  const products = res.map((product) => {
-    const productContainer = document.createElement("div");
-    const title = document.createElement("p");
-    const price = document.createElement("span");
-    const image = document.createElement("img");
-    const description = document.createElement("span");
+  return (root.innerHTML = res
+    .map((product) => {
+      let { price, title, image, description } = product;
+      title = title.substring(0, 15);
+      description = description.substring(0, 30) + "...";
 
-    productContainer.setAttribute("class", "content");
+      return ` <div class="col" >
+              <div class="content">
+    <div class="image">
+      <img src=${image} alt="image" class="img-responsive" />
+    </div>
+    <div class="title">
+      <h3>${title}</h3>
+    </div>
+    <div class="description">
+      <p class="text-muted">${description}</p>
+    </div>
+    <div class="footer">
+      <span class="price">$${price}</span>
+      <a href="#" class="buy-btn"><i class="fa-solid fa-bag-shopping"></i></a>
+    </div>
+  </div>
+</div> `;
+    })
+    .join(""));
 
-    title.textContent = product.title;
-    productContainer.appendChild(title);
-
-    image.width = 300;
-    image.src = product.image;
-    productContainer.appendChild(image);
-
-    description.textContent = product.description;
-    productContainer.appendChild(description);
-
-    price.textContent = product.price;
-    productContainer.appendChild(price);
-  });
-  return products;
+  
 }
 
 const increment = document.getElementById("increment");
