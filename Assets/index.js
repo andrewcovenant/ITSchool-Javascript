@@ -10,10 +10,15 @@ callApi();
 function listProducts(res) {
   return (root.innerHTML = res
     .map((product) => {
-      let { price, title, image, description } = product;
+      let { id, price, title, image, description } = product;
       title = title.substring(0, 15);
       description = description.substring(0, 30) + "...";
 
+      const prod={
+        id:id,
+        title:title,
+        price:price,
+      }
       return ` <div class="col" >
               <div class="content">
     <div class="image">
@@ -27,16 +32,19 @@ function listProducts(res) {
     </div>
     <div class="footer">
       <span class="price">$${price}</span>
-      <a href="#" class="buy-btn"><i class="fa-solid fa-bag-shopping"></i></a>
+      <button class="addtocart" onclick="addToCart(${prod})"> <i class="fa-solid fa-bag-shopping"></i> </button>
+      
     </div>
   </div>
 </div> `;
     })
     .join(""));
-
-  
 }
+ let productList=[];
 
+const addToCart=(prod)=> {
+  console.log(prod)
+}
 const increment = document.getElementById("increment");
 let count = 0;
 
