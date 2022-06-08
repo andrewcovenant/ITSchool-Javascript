@@ -49,8 +49,11 @@ function listProducts(res) {
 let productList = [];
 
 const addToCart = (id)=> {
-  console.log(id, API_RESPONSE);
+  let p = API_RESPONSE.filter(x => x.id === id);
+  productList.push(p[0]);
+  console.log(productList);
 }
+
 const increment = document.getElementById("increment");
 let count = 0;
 
