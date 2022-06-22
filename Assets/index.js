@@ -5,7 +5,7 @@ const callApi = () => {
     .then((response) => response.json())
     .then((data) => {
       API_RESPONSE = data;
-      return listProducts(data)
+      return listProducts(data);
     })
     .catch((error) => console.log(error));
 };
@@ -16,14 +16,15 @@ function listProducts(res) {
   return (root.innerHTML = res
     .map((product) => {
       let { id, price, title, image, description } = product;
+      console.log(product);
       title = title.substring(0, 15);
       description = description.substring(0, 30) + "...";
 
-      const prod={
-        id:id,
-        title:title,
-        price:price,
-      }
+      const prod = {
+        id: id,
+        title: title,
+        price: price,
+      };
       return ` <div class="col" >
               <div class="content">
     <div class="image">
@@ -48,17 +49,18 @@ function listProducts(res) {
 
 let productList = [];
 
-const addToCart = (id)=> {
-  let p = API_RESPONSE.filter(x => x.id === id);
+const addToCart = (id) => {
+  let p = API_RESPONSE.filter((x) => x.id === id);
   for (let i = 0; i < productList.length; i++) {
     if (productList[i].id === id) {
       return false;
     }
   }
+  p[0].quantity = 1;
   productList.push(p[0]);
-  localStorage.setItem('checkoutData', JSON.stringify(productList));
+  localStorage.setItem("checkoutData", JSON.stringify(productList));
   console.log(productList);
-}
+};
 
 const increment = document.getElementById("increment");
 let count = 0;
