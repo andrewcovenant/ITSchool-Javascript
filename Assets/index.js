@@ -50,7 +50,13 @@ let productList = [];
 
 const addToCart = (id)=> {
   let p = API_RESPONSE.filter(x => x.id === id);
+  for (let i = 0; i < productList.length; i++) {
+    if (productList[i].id === id) {
+      return false;
+    }
+  }
   productList.push(p[0]);
+  localStorage.setItem('checkoutData', JSON.stringify(productList));
   console.log(productList);
 }
 
