@@ -8,7 +8,7 @@ function checkoutList() {
       counter++;
       let { id, price, title, quantity } = product;
       title = title.substring(0, 15);
-
+      
       return ` 
             <div class="row text-center first-product-row my-2">
                 <div class="col">

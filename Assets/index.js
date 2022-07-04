@@ -19,12 +19,17 @@ function listProducts(res) {
       console.log(product);
       title = title.substring(0, 15);
       description = description.substring(0, 30) + "...";
+      root.classList.remove("hidden");
+      loader.classList.add("hidden"); 
+
 
       const prod = {
         id: id,
         title: title,
         price: price,
       };
+
+
       return ` <div class="col" >
               <div class="content">
     <div class="image">
@@ -46,6 +51,7 @@ function listProducts(res) {
     })
     .join(""));
 }
+
 
 let productList = [];
 
